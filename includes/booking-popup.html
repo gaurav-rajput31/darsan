@@ -1,0 +1,322 @@
+<!--==================================
+BOOKING POPUP
+===================================-->
+
+<div class="booking-modal" id="bookingModal">
+
+    <div class="booking-overlay"></div>
+
+    <div class="booking-popup">
+
+        <button class="close-popup">&times;</button>
+
+        <!--========================
+        Left
+        =========================-->
+
+        <div class="popup-left">
+
+            <img src="assets/images/booking.jpg" alt="Booking">
+
+            <div class="popup-overlay">
+
+                <span>BOOKINGS OPEN</span>
+
+                <h2>
+
+                    LET'S CREATE
+
+                    <span>MAGICAL MOMENTS.</span>
+
+                </h2>
+
+                <p>
+
+                    Weddings • Corporate Events • Concerts
+
+                    • College Festivals • Private Shows
+
+                </p>
+
+                <div class="popup-stats">
+
+                    <div>
+
+                        <h3>150+</h3>
+
+                        <p>LIVE SHOWS</p>
+
+                    </div>
+
+                    <div>
+
+                        <h3>20M+</h3>
+
+                        <p>STREAMS</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!--========================
+        Right
+        =========================-->
+
+        <div class="popup-right">
+
+            <h3>
+
+                BOOK YOUR EVENT
+
+            </h3>
+
+            <p>
+
+                Fill in your details and our team
+                will connect with you within 24 hours.
+
+            </p>
+
+            <form id="bookingForm">
+
+                <!-- Name -->
+
+                <div class="input-group">
+
+                    <input
+                    type="text"
+                    id="name"
+                    placeholder="Full Name"
+                    required>
+
+                </div>
+
+                <!-- Phone + Email -->
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Phone Number"
+                        required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <input
+                        type="email"
+                        id="email"
+                        placeholder="Email Address"
+                        required>
+
+                    </div>
+
+                </div>
+
+                <!-- Event -->
+
+                <div class="input-group">
+
+                    <select
+                    id="eventType"
+                    required>
+
+                        <option value="">
+
+                            Select Event Type
+
+                        </option>
+
+                        <option>
+
+                            Wedding
+
+                        </option>
+
+                        <option>
+
+                            Corporate Event
+
+                        </option>
+
+                        <option>
+
+                            College Festival
+
+                        </option>
+
+                        <option>
+
+                            Reception
+
+                        </option>
+
+                        <option>
+
+                            Birthday Party
+
+                        </option>
+
+                        <option>
+
+                            Music Festival
+
+                        </option>
+
+                        <option>
+
+                            Private Concert
+
+                        </option>
+
+                        <option>
+
+                            International Event
+
+                        </option>
+
+                        <option>
+
+                            Other
+
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <!-- Date + City -->
+
+                <div class="form-row">
+
+                    <div class="input-group">
+
+                        <input
+                        type="date"
+                        id="eventDate"
+                        required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <input
+                        type="text"
+                        id="city"
+                        placeholder="City"
+                        required>
+
+                    </div>
+
+                </div>
+
+                <!-- Guests -->
+
+                <div class="input-group">
+
+                    <input
+                    type="number"
+                    id="guest"
+                    placeholder="Expected Guests"
+                    required>
+
+                </div>
+
+                <!-- Message -->
+
+                <div class="input-group">
+
+                    <textarea
+
+                    id="message"
+
+                    placeholder="Tell us about your event..."
+
+                    required></textarea>
+
+                </div>
+
+                <!-- Submit -->
+
+                <button
+
+                class="popup-submit"
+
+                type="submit">
+
+                    BOOK NOW
+
+                </button>
+
+                <p class="popup-note">
+
+                    ⚡ Average response time
+
+                    <strong>Within 24 Hours</strong>
+
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!--==================================
+SUCCESS POPUP
+===================================-->
+
+<div class="success-popup">
+
+    <div class="success-box">
+
+        <div class="success-icon">
+
+            ✓
+
+        </div>
+
+        <h2>
+
+            THANK YOU
+
+            <span class="success-name">
+
+                Guest
+
+            </span>
+
+        </h2>
+
+        <p>
+
+            Your booking request has been submitted successfully.
+
+        </p>
+
+        <small>
+
+            🎉 Best Wishes!
+
+            <br>
+
+            Our team will connect with you
+
+            within <strong>24 Hours.</strong>
+
+        </small>
+
+    </div>
+
+</div>
