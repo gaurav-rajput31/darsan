@@ -2053,12 +2053,20 @@ FOOTER
 
 <!-- Booking Popup -->
 
-<div id="bookingModal">
 
+         <div id="booking-container"></div>
 
+         <script>
+fetch("includes/booking-popup.html")
+.then(res => res.text())
+.then(html => {
 
-     
-         </div>
+    document.getElementById("booking-container").innerHTML = html;
+
+    initBookingPopup();
+
+});
+</script>
 
          
 
@@ -2068,7 +2076,7 @@ FOOTER
 
 
 
-<script src="./js/booking-popup.js"></script>
+<script src="./js/booking-popup.js"></scrip>
 
 
 
