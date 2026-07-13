@@ -2099,45 +2099,39 @@ FOOTER
 <!-- Booking Popup -->
 
 
-         <div id="booking-container"></div>
+<div id="booking-container"></div>
 
-
-         
-
-<!-- JS -->
-
-<script src="./js/main.js" defer></script>
-
-
-
-<script src="./js/booking-popup.js"></script>
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-
-
+<!-- GSAP -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+
+<!-- Lenis -->
 <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
 
+<!-- Main -->
+<script src="./js/main.js"></script>
+
+<!-- Booking -->
+<script src="./js/booking-popup.js"></script>
+
+<!-- Load Popup -->
 <script>
-
 fetch("./includes/booking-popup.html")
-.then(res=>res.text())
-.then(html=>{
+.then(res => {
+    if (!res.ok) throw new Error("Popup file not found");
+    return res.text();
+})
+.then(html => {
+    document.getElementById("booking-container").innerHTML = html;
 
-document.getElementById("booking-container").innerHTML=html;
-
-initBookingPopup();
-
-});
-
+    if (typeof window.initBookingPopup === "function") {
+        window.initBookingPopup();
+    } else {
+        console.error("initBookingPopup() not found");
+    }
+})
+.catch(err => console.error(err));
 </script>
-
-
 
 </body>
 
