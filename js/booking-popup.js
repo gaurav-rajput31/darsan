@@ -2,19 +2,15 @@
 BOOKING POPUP
 ==================================*/
 
-document.addEventListener("DOMContentLoaded", () => {
+window.initBookingPopup = function () {
 
     const modal = document.getElementById("bookingModal");
-    const overlay = document.querySelector(".booking-overlay");
-    const closeBtn = document.querySelector(".close-popup");
+    const overlay = modal ? modal.querySelector(".booking-overlay") : null;
+    const closeBtn = modal ? modal.querySelector(".close-popup") : null;
     const form = document.getElementById("bookingForm");
     const success = document.querySelector(".success-popup");
     const successName = document.querySelector(".success-name");
     const openBtns = document.querySelectorAll(".open-booking");
-
-    /*==========================
-    Check Required Elements
-    ==========================*/
 
     if (!modal) {
         console.error("bookingModal not found");
@@ -49,33 +45,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     openBtns.forEach(btn => {
 
-        btn.addEventListener("click", function (e) {
+        btn.onclick = function (e) {
 
             e.preventDefault();
-
             openPopup();
 
-        });
+        };
 
     });
 
     /*==========================
-    CLOSE BUTTON
+    CLOSE
     ==========================*/
 
     if (closeBtn) {
 
-        closeBtn.addEventListener("click", closePopup);
+        closeBtn.onclick = closePopup;
 
     }
 
-    /*==========================
-    OVERLAY
-    ==========================*/
-
     if (overlay) {
 
-        overlay.addEventListener("click", closePopup);
+        overlay.onclick = closePopup;
 
     }
 
@@ -83,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ESC
     ==========================*/
 
-    document.addEventListener("keydown", function (e) {
+    document.onkeydown = function (e) {
 
         if (e.key === "Escape") {
 
@@ -91,23 +82,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-    });
+    };
 
     /*==========================
-    FORM SUBMIT
+    SUBMIT
     ==========================*/
 
     if (form && success && successName) {
 
-        form.addEventListener("submit", function (e) {
+        form.onsubmit = function (e) {
 
             e.preventDefault();
 
-            const nameInput = document.getElementById("name");
+            const name =
+                document.getElementById("name").value.trim() || "Guest";
 
-            const name = nameInput ? nameInput.value.trim() : "Guest";
-
-            successName.textContent = name || "Guest";
+            successName.textContent = name;
 
             closePopup();
 
@@ -115,28 +105,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
             form.reset();
 
-            setTimeout(function () {
+            setTimeout(() => {
 
                 success.classList.remove("active");
 
             }, 4000);
 
-        });
+        };
 
     }
 
     /*==========================
-    SUCCESS CLICK
+    SUCCESS CLOSE
     ==========================*/
 
     if (success) {
 
-        success.addEventListener("click", function () {
+        success.onclick = function () {
 
             success.classList.remove("active");
 
-        });
+        };
 
     }
 
-});
+};
