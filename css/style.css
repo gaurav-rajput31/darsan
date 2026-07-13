@@ -6992,3 +6992,188 @@ font-size:16px;
 }
 
 }
+
+
+
+
+/*==================================
+BOTTOM BAR
+==================================*/
+
+.footer-bottom-bar{
+
+    position:relative;
+
+    padding:45px 0;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    background:#050505;
+
+    overflow:hidden;
+
+}
+
+.footer-bottom-bar::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:420px;
+
+    height:420px;
+
+    background:rgba(212,175,55,.07);
+
+    filter:blur(120px);
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+}
+
+.footer-bottom-bar .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:2;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+
+}
+
+.footer-connect span{
+
+    color:#D4AF37;
+
+    letter-spacing:5px;
+
+    font-size:13px;
+
+}
+
+.footer-connect h3{
+
+    margin-top:10px;
+
+    font-size:34px;
+
+    font-family:"Bebas Neue",sans-serif;
+
+}
+
+.footer-social{
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.footer-social a{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#111;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    transition:.45s;
+
+}
+
+.footer-social a:hover{
+
+    background:#D4AF37;
+
+    color:#111;
+
+    transform:translateY(-8px) rotate(360deg);
+
+}
+
+/*==========================
+3D TOP BUTTON
+==========================*/
+
+.scroll-top{
+
+    width:78px;
+
+    height:78px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(circle at 30% 30%,
+
+    #fff,
+
+    #D4AF37 55%,
+
+    #7b5d09);
+
+    box-shadow:
+
+    0 15px 45px rgba(212,175,55,.35);
+
+    cursor:pointer;
+
+    transition:.45s;
+
+}
+
+.scroll-top span{
+
+    font-size:30px;
+
+    color:#111;
+
+    display:block;
+
+    transition:.45s;
+
+}
+
+.scroll-top:hover{
+
+    transform:translateY(-10px) scale(1.08);
+
+}
+
+.scroll-top:hover span{
+
+    transform:translateY(-6px);
+
+}
